@@ -1,6 +1,6 @@
 /*
 HACKERRANK problem.
-Title: "3D Surface Area."
+Title: "3D Surface Area"
 Difficulty: "Medium".
 Link: https://www.hackerrank.com/challenges/3d-surface-area/problem
 
@@ -9,7 +9,6 @@ To test it you have two options:
     Option 1: Launch given code only passing your own "array" value.
     Option 2: Copy&Paste code on Hackerrank to make sure it works.
 */ 
-
 
 function surfaceArea(A) {
     // Set of initial values. 
@@ -49,21 +48,21 @@ function surfaceArea(A) {
         if (layerRecord[vert][horz]) {
 
             // Check if any stone is attached to current stone's right side.
-            if (horz === height - 1) { // If element is on the right edge than no attachment is possible.
+            if (horz === height - 1) { // If element is on the right edge no attachment is possible.
                 stonePrice++;
             } else if (!layerRecord[vert][horz + 1]) { // If element on the right side doesn't exist => current stone's right side is opened. Incremenet the price.
                 stonePrice++;
             };
 
             // Check if any stone is attached to current stone's bottom side.
-            if (vert === width - 1) { // If element is on the bottom edge than no attachment is possible.
+            if (vert === width - 1) { // If element is on the bottom edge no attachment is possible.
                 stonePrice++;
             } else if (!layerRecord[vert + 1][horz]) {
                 stonePrice++;
             };
     
             // Check if any stone is attached to current stone's left side.
-            if (!horz) { // If element is on the left edge than no attachment is possible.
+            if (!horz) { // If element is on the left edge no attachment is possible.
                 stonePrice++;
             } else if (!layerRecord[vert][horz - 1]) {
                 stonePrice++;
