@@ -11,6 +11,30 @@ To test it you have two options:
 */ 
 
 function marsExploration(s) {
+    const arr = s.split('');
+    let answerAcc = 0;
+    
+    for (let i = 1; i < arr.length;) {
 
+        if (arr[i] !== `O`) {
+            answerAcc++;
+        }
 
-}
+        if (arr[i - 1] !== `S`) {
+            answerAcc++;
+        }
+
+        if (arr[i + 1] !== `S`) {
+            answerAcc++;
+        };
+
+        i += 3;
+    };
+
+    console.log(answerAcc);
+    return answerAcc;
+};
+
+const string = `SOSSPSSQSSOR`;
+
+marsExploration(string);
