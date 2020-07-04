@@ -17,9 +17,6 @@ function encryption(s) {
     // Increase rows' number if all characters do not fit.
     if (rows * columns < stringArr.length) rows += 1;
 
-    console.log('columns = ' + columns);
-    console.log('rows = ' + rows);
-
     // Loop through all the rows.
     
     console.log(stringArr.length);
@@ -28,14 +25,10 @@ function encryption(s) {
 
     stringArr.forEach((el, index) => {
         let row = [];
-        console.log('index = ' + index);
-        console.log('i = ' + i);
         
 
         if ((index + 1) % columns == 0 && i <= rows) {
-            console.log(stringArr);
             row = stringArr.slice(index - columns + 1, index + 1);
-            console.log(row);
 
             // Each row must store number of characters equal to columns.
             sortedArr.push(row);
@@ -57,14 +50,11 @@ function encryption(s) {
         });
 
         answerArr[i] = answerArr[i].join('');
-        console.log(answerArr);
-
         i++;
     };
 
     let answer = answerArr.join(' ');
 
-    console.log(answer);
     return answer;
 };
 
