@@ -6,8 +6,8 @@ Link: https://www.hackerrank.com/challenges/separate-the-numbers/problem
 
 The code is fully functional and passed 100% tests.
 To test it you have two options:
-    Option 1: Launch given code only passing your own "array" value.
-    Option 2: Copy&Paste code on Hackerrank to make sure it works.
+1) Launch given code only passing your own "array" value.
+2) Copy&Paste code on Hackerrank to make sure it works.
 
 This problem forced me to generate mutiple conditions and also introduced me to the number upper limits JavaScript can recognize. 
 The ceiling number is 9007199254740992 thus different procedure is generated for analyzing numbers over 9007199254740992. Check this procedure below.
