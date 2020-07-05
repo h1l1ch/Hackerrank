@@ -81,11 +81,11 @@ function surfaceArea(A) {
     };
 
     // Loops through 2D array. [i] - vertically counted index (from top to bottom). [j] - horizontally counted index (from left to right).
-    const doubleLoop = (arr, callback, accessKey) => {
+    const doubleLoop = (arr, callback, accessKey) => { // This double loop is suitable for operating with 2D matrices.
 
-        for (let i = 0; i < arr.length;) {
+        for (let i = 0; i < arr.length;) { // i - counts rows in 2D martix. 
 
-            for (let j = 0; j < arr[i].length;) {
+            for (let j = 0; j < arr[i].length;) { // j - counts columns in 2D matrix.
                 callback(arr[i][j], i, j); // Calls function on each iterated element.
 
                 // Used once to calculate width and height within the loop.
