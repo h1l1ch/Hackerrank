@@ -34,4 +34,4 @@ function sherlockAndAnagrams(s) {
     return count;
 }
 
-sherlockAndAnagrams();
+sherlockAndAnagrams(s);
