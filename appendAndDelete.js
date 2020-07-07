@@ -9,10 +9,6 @@ To test it you have two options:
 Option 1: Launch given code only passing your own "array" value.
 Option 2: Copy&Paste code on Hackerrank to make sure it works.
 
-Things I've learned:
-* Strings also have their length attribute.
-* Slice() can be called upon strings.
-* Return can be placed in multiple function's places.
 */ 
 
 function appendAndDelete(s, t, k) {
