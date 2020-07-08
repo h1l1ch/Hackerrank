@@ -14,13 +14,8 @@ Option 2: Copy&Paste code on Hackerrank to make sure it works.
 function decentNumber(n) {
     let y = n;
     let z = y;
-    while (z % 3 !== 0) {
-        z -= 5; 
+    while (z % 3 !== 0) { // z - total number of 5's. 
+        z -= 5; // y - number of 3's. 
     }
-    if (z < 0) {
-        console.log('-1');
-    }
-    else {
-        console.log(new Array(z).fill('').map(a => '5').concat(new Array(y-z).fill('').map(a => '3')).join(''))
-    }
+    z < 0 ? console.log('-1') : console.log(new Array(z).fill('').map(a => '5').concat(new Array(y-z).fill('').map(a => '3')).join(''));
 }
