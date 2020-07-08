@@ -11,7 +11,6 @@ function permutationEquation(p) {
                     if (el2 == i1 + 1) {
                         y = i2 + 1;
                         arrayAnswer.push(y);
-                        console.log(y);
                     }
                 });
             };

@@ -17,8 +17,6 @@ function organizingContainers(container) {
 
     let arrBallsInBoxesSorted = arrBallsInBoxes.sort();
 
-    console.log(arrBallsInBoxes);
-
     for (let i = 0; i < container.length;) {
         arrTypesTotal[i] = 0;
 
