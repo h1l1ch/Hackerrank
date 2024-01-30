@@ -1,9 +1,10 @@
 /*
 Title: "Cavity Map"
+// Remark: "cavity" is a pit.
 HACKERRANK problem.
 
 Difficulty: "Easy".
-Link: https://www.hackerrank.com/challenges/3d-surface-area/problem
+Link: https://www.hackerrank.com/challenges/cavity-map/problem
 The code is fully functional and passed 100% tests.
 To test it you have two options:
     Option 1: Launch given code only passing your own "array" value.

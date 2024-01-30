@@ -1,0 +1,157 @@
+* {
+    margin-top: 10px;
+}
+
+/* Question 1 */
+
+.inline .item{
+    display: inline
+}
+
+.block .item{
+    display: block
+}
+
+.inline-block .item{
+    display: inline-block
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between
+}
+
+.item {
+    width: 200px;
+    height: 200px;
+    background: lightgray;
+    font-size: 50px;
+}
+
+/* Question 2 */
+
+.item-2 {
+    width: 100px;
+    height: 100px;
+    background-color: lightgray;
+    font-size: 50px;
+    animation: rotate 1s infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateX(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+/* Question 3 */
+
+.item-3 {
+    width: 200px;
+    height: 200px;
+}
+
+.first {
+    background-color: aqua;
+    position: static;
+    left: 100px;
+}
+
+.second {
+    background-color: rosybrown;
+}
+
+.third {
+    background-color: blueviolet; 
+}
+
+/* Question 4 */
+
+input {
+    opacity: 0;
+    /* width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%; */
+}
+
+label {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border-radius: 50%;
+}
+
+input:checked + label {
+    background-color: tomato;
+} 
+
+/* Question 5 */
+
+.question-5 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.item-5 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+/* Question 6 */
+
+.item-6 {
+    width: 100px;
+    height: 100px;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Question 7: как обрабатывает страницу WEB-браузер? */
+
+/* Question 8: what are inline styles? */
+/* Inline стили имеют самый высокий приоритет */
+
+.item-8 {
+    color: orange;
+}
+
+/* Question 9 */
+
+.item-9 {
+    width: 100px;
+    height: 100px;
+    background-color: black;
+    border: 50px solid red;
+}
+
+/* Question 10: адаптивная вёрстка. 
+Методы с помощью которых можно сделать страницу адаптивной. */
+
+/* Question 11: что такое BEM? */
+
+/* Question 12 */
+
+/* Question 13: в чём различие между строчными и блочными элементами? */
+
+/* Question 14: разница между margin и padding. */
+
+/* Question 15: что такое семантические элементы и для чего они нужны?  */
+
+/* Question 16 */
+
+.item-16 {
+    width: 10000px;
+}
+
+.question-16 {
+    overflow: hidden;
+}

@@ -15,6 +15,7 @@ function appendAndDelete(s, t, k) {
     if ((t.endsWith(s) || s.endsWith(t)) || (s.length + t.length <= k)) {
         return "Yes";
     }
+    // Counter counts how many characters must be deleted to encounter with the fist character that does not match.
     let counter = 0;
     for (let i = 0; i < s.length; i++) {
         if (s[i] === t[i]) {
@@ -23,6 +24,7 @@ function appendAndDelete(s, t, k) {
             break;
         }
     }
+    // To count total steps total number of deleted characters added to total number of added characters. 
     if (((s.length - counter) + (t.length - counter)) === k) {
         return "Yes";
     } else {
@@ -30,3 +32,5 @@ function appendAndDelete(s, t, k) {
     }
 
 }
+
+appendAndDelete(`abbbbbb`, `bbbbbbb`, 14)

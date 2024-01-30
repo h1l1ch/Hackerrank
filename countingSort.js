@@ -1,3 +1,17 @@
+/*
+HACKERRANK problem.
+Title: "Counting Sort 1"
+Difficulty: "Easy".
+Link:   https://www.hackerrank.com/challenges/countingsort1/problem
+
+The code is fully functional and passed 100% tests.
+To test it you have two options:
+1) Launch given code only passing your own "array" value.
+2) Copy&Paste code on Hackerrank to make sure it works.
+
+If you read this - the solved problem isn't difficult. Nothing to comment.
+*/
+
 function countingSort(arr) {
 
     let fillArr = [];

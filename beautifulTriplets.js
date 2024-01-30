@@ -1,74 +1,49 @@
+/*
+HACKERRANK problem.
+Title: "Beautiful Triplets"
+Difficulty: "Easy".
+Link: https://www.hackerrank.com/challenges/beautiful-triplets/problem
+
+The code is fully functional and passed 100% tests.
+To test it you have two options:
+    Option 1: Launch given code only passing your own "array" value.
+    Option 2: Copy&Paste code on Hackerrank to make sure it works.
+*/ 
+
 function beautifulTriplets(d, arr) {
     let ansAcc = 0;
-    let j = 0;
+    let k, bottomElement, centralElement, i, topElement, j;
+    let topEl, btmEl; 
 
-    // Stores numberType and total number under corresponding index. For example Type: 2, Count: 24; Type: 3, Count: 13 etc.
-    const numObject = {
-        numbersType: [],
-        numbersCount: []
-    };
+    for (i = 1; i < arr.length - 1; i++) {
+        topEl = false;
+        btmEl = false;
+        centralElement = arr[i];
+        for (k = 0; k < i; k++) {
+            // 
+            if (arr[k] === centralElement - d) {
+                // Bottom Element = Central Element - difference
+                bottomElement = arr[k];
+                btmEl = true;
 
-    // Iterate through given array to organize all elements of given array. 
-    for (let i = 0; i < arr.length; i++) {
+                for (j = i + 1; j < arr.length; j++) {
 
-        if (i == 0) {
-            numObject.numbersCount[j] = 0;
-            numObject.numbersType.push(arr[i]);
-        } else if (arr[i] !== arr[i - 1]) {
-            j++;
-            numObject.numbersCount[j] = 0;
-            numObject.numbersType.push(arr[i]);
-        } 
-
-        numObject.numbersCount[j]++;
-    };
-
-    console.log(numObject);
-    
-    // Loop through calculated object. 
-    numObject.numbersType.forEach((el, index) => {
-
-        // Only if number is not located on the edge it can be the middle number of the triplet. This is what we need.
-        if (index !== 0 && index !== numObject.numbersType.length - 1) {
-            // Define required bottom & top triplet number.
-            let bottomEl = el - d;
-            let topEl = el + d;
-            
-            // Initially set tehir index to falsy value.
-            let bottomIndex = 0;
-            let topIndex = 0;
-
-            // Second loop through the object to find existence of bottom & top triplet numbers.
-            numObject.numbersType.forEach((el1, index1) => {
-
-                if (el1 === bottomEl) {
-                    // Store bottom number's index. Add 1 in case bottom index is 0 to avoid logical errors (0 is falsy value).
-                    bottomIndex = index1 + 1;
+                    if (arr[j] === centralElement + d) {
+                        // Top Element = Central Element + difference
+                        topElement = arr[j];
+                        topEl = true;
+                        ansAcc++;
+                    };
                 };
-
-                if (el1 === topEl) {
-                    // Also store top triplet's index.
-                    topIndex = index1;
-                };
-            });
-    
-            // Triplet exists if all three points (bottom, middle, top) exist in the array.  
-            if (bottomIndex && topIndex) {
-
-                // Find maximum combination of exact same triplets. Its maximum combination strictly depends on maximum number of triplet's points.
-                let addition = Math.max(numObject.numbersCount[bottomIndex - 1], numObject.numbersCount[index], numObject.numbersCount[topIndex]);
-                // Increment accumulator's value.
-                ansAcc += addition;
             };
         };
-    });
+    }
 
-    console.log(ansAcc);
     return ansAcc;
 };
 
 const d = 3;
-const string = `1 2 4 5 7 8 10`
+const string = `1 6 7 7 8 10 12 13 14 19`
 const arr = string.split(' ');
 const arrNum = arr.map((el, index) => parseInt(arr[index]));
 

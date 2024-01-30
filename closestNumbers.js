@@ -13,12 +13,11 @@ If you read this - the solved problem isn't difficult. Nothing to comment.
 */
 
 function closestNumbers(arr) {
+    // Sorts elements in ascending order.
     arr.sort((a, b) => a - b); 
-    let minDif;
-    let answerArr = [];
-    let endNum;
-    let startNum = arr[0];
+    let minDif, answerArr = [], endNum, startNum = arr[0];
     
+    // Doing loop to find minimal difference between two adjacent elements.
     const classicLoop = (array) => {
 
         for (let i = 1; i < array.length;) {
@@ -36,6 +35,8 @@ function closestNumbers(arr) {
 
     classicLoop(arr);
 
+    // After we found minimal difference we can find all pairs of elements with such difference between them
+    // and push these elements into an array of answers.
     for (let i = 1; i < arr.length;) {
         endNum = arr[i];
         let curDif = Math.abs(endNum - startNum);

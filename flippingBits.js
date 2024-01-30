@@ -13,4 +13,5 @@ Option 2: Copy&Paste code on Hackerrank to make sure it works.
 
 function flippingBits(N) {
     return ~ N >>> 0;
-}
+};
+

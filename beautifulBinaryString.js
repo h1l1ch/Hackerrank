@@ -10,10 +10,9 @@ To test it you have two options:
     Option 2: Copy&Paste code on Hackerrank to make sure it works.
 */ 
 
-// Easy code. Nothing special.
 function beautifulBinaryString(b) {
-    const arrStr = b.split('');
-    const arr = arrStr.map((el, index) => parseInt(arrStr[index]));
+    const arrStr = b.split(''),
+        arr = arrStr.map((el, index) => parseInt(arrStr[index]));
     
     let answerAcc = 0;
     

@@ -11,13 +11,30 @@ Option 2: Copy&Paste code on Hackerrank to make sure it works.
 
 */ 
 
-function circularArrayRotation(a, k, queries) {
-    const actualRotation = k % a.length;
+function circularArrayRotation(arr, k, queries) {
+    // Number of steps required.
+    k = k % arr.length;
+
+    // New array for the stored final values.
     return queries.map((index) => {
-        const actualIndex = index-actualRotation;
-        if(actualIndex<0) {
-            return a[a.length+actualIndex];
+        const curIndex = k - index;
+        if (curIndex <= 0) {
+            return arr[Math.abs(curIndex)]
+        } else {
+            return arr[arr.length]
         }
-        return a[actualIndex];
-    });
+    })
+    // return queries.map((index) => {
+    //     const curIndex = index-k;
+    //     if(curIndex<0) {
+    //         return a[a.length+curIndex];
+    //     }
+    //     return a[curIndex];
+    // });
 };
+
+let arr = [1, 2, 3];
+let queries = [0, 1, 2];
+k = 2;
+circularArrayRotation(arr, k, queries);
+

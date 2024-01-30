@@ -12,10 +12,10 @@ To test it you have two options:
 
 // Nothing special. Straightforward task.
 
-function chocolateFeast(n, c, m) { // n - initial
-    let initialMoney = n;
-    let barCost = c;
-    let wrapperForBar = m;
+function chocolateFeast(initialMoney, barCost, wrapperForBar) { // n - initial
+    // let initialMoney = n;
+    // let barCost = c;
+    // let wrapperForBar = m;
     let barsBought = 0;
     let curWrappers = 0;
 
@@ -24,7 +24,7 @@ function chocolateFeast(n, c, m) { // n - initial
         curWrappers++;
         barsBought++;
 
-        if (curWrappers >= wrapperForBar) {
+        if (curWrappers === wrapperForBar) {
             curWrappers -= wrapperForBar;
             barsBought++;
             curWrappers++;

@@ -10,16 +10,16 @@ To test it you have two options:
     Option 2: Copy&Paste code on Hackerrank to make sure it works.
 */ 
 
+// Each letter has its own charater code. 
 function caesarCipher(s, k) {
     const arr = s.split('');
+    k = k % 26;
 
     for (let i = 0; i < arr.length; i++) {
         let code = arr[i].charCodeAt(); // Used char codes for encryption.
 
-        if (code >= 65 && code + k % 26 <= 90) arr[i] = String.fromCharCode(code + k % 26);
-        if (code >= 97 && code + k % 26 <= 122) arr[i] = String.fromCharCode(code + k % 26);
-        if (code <= 90 && code + k % 26 > 90) arr[i] = String.fromCharCode(k % 26 - (90 - code) + 65 - 1);
-        if (code <= 122 && code + k  % 26 > 122) arr[i] = String.fromCharCode(k % 26 - (122 - code) + 97 - 1);
+        if ((code >= 65 && code + k <= 90) || (code >= 97 && code + k <= 122)) arr[i] = String.fromCharCode(code + k);
+        if ((code <= 90 && code + k > 90) || (code <= 122 && code + k > 122)) arr[i] = String.fromCharCode(k - (26 - code));
     };
 
     const ansStr = arr.join('');

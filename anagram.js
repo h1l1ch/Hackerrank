@@ -4,6 +4,8 @@ Title: "Anagram"
 Difficulty: "Easy".
 Link: https://www.hackerrank.com/challenges/anagram/problem
 
+Two words are anagrams of one another if their letters can be rearranged to form the other word.
+
 The code is fully functional and passed 100% tests.
 To test it you have two options:
 Option 1: Launch given code only passing your own "array" value.
@@ -29,3 +31,6 @@ function anagram(s) {
 
     return b.length
 }
+
+
+anagram(`xaxbbbxx`);
